@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de contenido</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generador de contenido</h1>
+        <div class="buttons-extract">
+            <button id="extract">Contenido del sitio</button>
+            <button id="selectedTextButton">Texto seleccionado</button>
+        </div>
+        <div class="configurations">
+            <label for="language">Idioma:</label>
+            <select id="language">
+                <option value="es-mx">Español</option>
+                <option value="en-us">Inglés</option>
+            </select>
+            <label for="contentType">Tipo de contenido:</label>
+            <select id="contentType">
+                <option value="blog">Blog</option>
+                <option value="article">Artículo</option>
+                <option value="report">Reporte</option>
+                <option value="tutorial">Tutorial</option>
+                <option value="history">Historia</option>
+                <option value="news">Noticias</option>
+                <option value="product">Producto</option>
+                <option value="email">Email</option>
+            </select>
+        </div>
+        <div class="output-container">
+            <button id="copyButton">Copiar</button>
+            <textarea id="output"></textarea>
+        </div>
+        <div id="imageContainer" class="image-container">
+        </div>
+        <button id="generate">Generar contenido con IA</button>
+    </div>
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Generando contenido...</p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

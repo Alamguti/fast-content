@@ -1,0 +1,176 @@
+body {
+    background-color: #f4f7fc;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    width: 750px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 670px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+}
+
+.buttons-extract {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+button {
+    background-color: #5c6bc0;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #3f4b8f;
+}
+
+textarea {
+    field-sizing: content;
+    width: 100%;
+    min-height: 160px;
+    max-height: 400px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    resize: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #5c6bc0;
+}
+
+#generate {
+    background-color: #00bcd4;
+    margin-top: 12px;
+}
+
+#generate:hover {
+    background-color: #0097a7;
+}
+
+.output-container {
+    position: relative;
+    width: 100%;
+}
+
+#copyButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    width: 70px;
+}
+
+#copyButton:hover {
+    background-color: #0097a7;
+}
+
+.loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    border-color: #5c6bc0;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #5c6bc0;
+    background-color: #ffffff;
+}
+
+select option {
+    padding: 10px;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
